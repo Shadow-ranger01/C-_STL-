@@ -15,7 +15,11 @@ using namespace std;
 bool comparator(pair<int, int> p1, pair<int, int> p2){   // creating a comparator for the 2nd val sorting
     if(p1.second < p2.second)
         return true;
-    else
+    if(p1.second > p2.second)             // if 2nd val is equal then 
+        return false;
+    if(p1.first < p2.first)              // sorting will be on the 1st parameter based 
+        return true;
+     else
         return false;
 }
 
