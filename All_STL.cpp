@@ -52,5 +52,28 @@ int main() {
     minHeap.push(10);
     minHeap.push(5);
 
+    // ==================== SET ====================
+    set<int> s1 = {3, 1, 2, 2};
+
+    // ==================== MULTISET ====================
+    multiset<int> ms = {1, 2, 2, 3};
+
+    // ==================== UNORDERED SET ====================
+    unordered_set<int> us = {1, 2, 3};
+
+    // ==================== MAP ====================
+    map<int, string> mp;
+    mp[1] = "one";
+    mp[2] = "two";
+
+    // ==================== MULTIMAP ====================
+    multimap<int, string> mmp;
+    mmp.insert({1, "one"});
+    mmp.insert({1, "uno"});
+
+    // ==================== UNORDERED MAP ====================
+    unordered_map<string, int> ump;
+    ump["apple"] = 5;
+
     return 0;
 }
