@@ -75,5 +75,20 @@ int main() {
     unordered_map<string, int> ump;
     ump["apple"] = 5;
 
+    // ==================== LIST ====================
+    list<int> li = {1, 2, 3};
+    li.push_front(0);
+    li.push_back(4);
+
+    // ==================== FORWARD LIST ====================
+    forward_list<int> fl = {1, 2, 3};
+    fl.push_front(0);
+
+    // ==================== ITERATORS ====================
+    auto it = v.begin();
+    if (it != v.end()) {
+        cout << *it << "\n";
+    }
+
     return 0;
 }
