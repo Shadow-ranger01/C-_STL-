@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,7 +35,7 @@ int main() {
     q.push(20);
     q.front();
     q.pop();
-    
+
     // ==================== DEQUE ====================
     deque<int> dq;
     dq.push_back(10);
@@ -90,5 +91,72 @@ int main() {
         cout << *it << "\n";
     }
 
+    // ==================== ALGORITHMS ====================
+    vector<int> a = {4, 1, 3, 2, 5};
+
+    sort(a.begin(), a.end());
+    stable_sort(a.begin(), a.end());
+
+    reverse(a.begin(), a.end());
+    rotate(a.begin(), a.begin() + 1, a.end());
+
+    cout << *max_element(a.begin(), a.end()) << "\n";
+    cout << *min_element(a.begin(), a.end()) << "\n";
+
+    cout << count(a.begin(), a.end(), 3) << "\n";
+    cout << (find(a.begin(), a.end(), 3) != a.end()) << "\n";
+
+    next_permutation(a.begin(), a.end());
+    prev_permutation(a.begin(), a.end());
+
+    // ==================== BINARY SEARCH ====================
+    sort(a.begin(), a.end());
+
+    bool found = binary_search(a.begin(), a.end(), 3);
+
+    auto lb = lower_bound(a.begin(), a.end(), 3);
+    auto ub = upper_bound(a.begin(), a.end(), 3);
+
+    // ==================== NUMERIC ====================
+    vector<int> nums = {1, 2, 3, 4, 5};
+
+    cout << accumulate(nums.begin(), nums.end(), 0) << "\n";
+    cout << gcd(12, 18) << "\n";
+    cout << lcm(12, 18) << "\n";
+
+    // ==================== BIT OPERATIONS ====================
+    int x = 10;
+
+    cout << __builtin_popcount(x) << "\n";
+    cout << __builtin_clz(x) << "\n";
+    cout << __builtin_ctz(x) << "\n";
+
+    // ==================== PAIR SORTING ====================
+    vector<pair<int, int>> vp = {
+        {2, 3}, {1, 5}, {2, 1}
+    };
+
+    sort(vp.begin(), vp.end());
+
+    // ==================== LAMBDA / CUSTOM SORT ====================
+    vector<int> custom = {5, 1, 4, 2, 3};
+
+    sort(custom.begin(), custom.end(),
+         [](int a, int b) {
+             return a > b;
+         });
+
+    // ==================== EMPLACE / INSERT ====================
+    set<int> st2;
+    st2.insert(10);
+    st2.emplace(20);
+
+    // ==================== OUTPUT ====================
+    for (int value : v) {
+        cout << value << " ";
+    }
+    cout << "\n";
+
     return 0;
 }
+
